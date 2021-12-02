@@ -70,7 +70,34 @@ button:focus {
 =                  Gallery                    =
 =============================================*/
 
-/* TODO: 設定Hover特效 */
+/* 設定Hover特效 */
+
+[id^='galleryImage'] {
+    background-size: cover;
+    height: 250px;
+    filter: grayscale(100%);
+
+}
+
+[id^='galleryImage']>.galleryText {
+    color: white;
+    font-size: 6px;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    opacity: 0;
+    text-align: center;
+    line-height: 250px;
+}
+
+[id^='galleryImage']:hover {
+    filter: grayscale(0);
+}
+
+[id^='galleryImage']>.galleryText:hover {
+    font-size: 22px;
+    opacity: 1;
+    transition: all .5s ease-in;
+
+}
 
 [id^='galleryImage'] {
     background-size: cover;

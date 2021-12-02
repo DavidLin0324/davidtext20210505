@@ -15,6 +15,7 @@
         integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- 使用style.css -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
 
 </head>
 
@@ -131,11 +132,11 @@
         <div class="container">
             <h1 class="section-title mb-5 text-center">Features</h1>
             <div class="row justify-content-center">
-                <!-- TODO: 4-1 設定此區內文字 寬度為8欄-->
-                <div>
-                    <!-- TODO: 4-2 為article1 article2 設置collapse互動方式 data-target->id -->
-                    <button class="btn btn-primary">Team</button>
-                    <button class="btn btn-primary">Location</button>
+                <!--  4-1 設定此區內文字 寬度為8欄-->
+                <div class="col=8">
+                    <!--  4-2 為article1 article2 設置collapse互動方式 data-target->id -->
+                    <button class="btn btn-primary" data-toggle="collapse" data-target="#article1">Team</button>
+                    <button class="btn btn-primary" data-toggle="collapse" data-target="#article2">Location</button>
                     <article class="my-3 collapse" id="article1">
                         <h3>Team</h3>
                         <p>Our team members started with only 10 people. We're Website developer, Security engineer,
@@ -155,11 +156,19 @@
                             you're
                             interested to work with us. please follow our recruit news</p>
                     </article>
-                    <!-- TODO: 5-1 加入nav按鈕 data-toggle="tab" -->
+                    <!--  5-1 加入nav按鈕 data-toggle="tab" -->
+                    <ul class="nav nav-pills mt-5">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#article3"
+                                data-toggle="tab">Environment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#article4" data-toggle="tab">Philosophy</a>
+                    </ul>
 
-                    <!-- TODO: 5-2 為article3 article4 設置tab互動方式 tab-content tab-pane -->
-                    <div>
-                        <article id="article3" class="my-3">
+                    <!--  5-2 為article3 article4 設置tab互動方式 tab-content tab-pane -->
+                    <div class="tab-content">
+                        <article id="article3" class="tab-pane active my-3">
                             <h3>Environment</h3>
                             <p>We have a cozy office environment not just create casual atmosphere for daily working
                                 time, but also
@@ -171,7 +180,7 @@
                                 Check out more details
                             </p>
                         </article>
-                        <article id="article4" class="my-3">
+                        <article id="article4" class="tab-pane active my-3">
                             <h3>Philosophy</h3>
                             <p>We always keep our bussiness and products simple. So it will always be easy to learn and
                                 use. Our
@@ -183,7 +192,11 @@
                             </p>
                         </article>
                     </div>
-                    <!-- TODO: 6 崁入一個youtube影片 https://www.youtube.com/watch?v=gwDoRPcPxtc width="100%" height="400" -->
+                    <!--  6 崁入一個youtube影片 https://youtu.be/94SsKt8p5jA width="100%" height="400" -->
+                    <iframe width="100%" height="400" src="https://www.youtube.com/embed/94SsKt8p5jA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -198,8 +211,8 @@
         <div class="carousel-item active py-5 ">
             <div class="row justify-content-center">
                 <div class="col-sm-2">
-                    <!-- TODO: 6-3 設定使用者照片變圓型 rounded-circle-->
-                    <img src="img/reviewer-1.jpg" alt="">
+                    <!--  6-3 設定使用者照片變圓型 rounded-circle-->
+                    <img src="img/reviewer-1.jpg" alt="" style="border-radius:100% ;">
                 </div>
                 <div class="col-sm-6">
                     <h3 class="title">Food and beverage manager</h3>
@@ -217,8 +230,8 @@
         <!-- 第二頁 -->
         <div class="row justify-content-center">
             <div class="col-sm-2">
-                <!-- TODO: 設定使用者照片變圓型 -->
-                <img src="img/reviewer-2.jpg" alt="">
+                <!--  設定使用者照片變圓型 -->
+                <img src="img/reviewer-2.jpg" alt="" style="border-radius:100% ;">
             </div>
             <div class="col-sm-6">
                 <h3 class="title">Environmental scientist</h3>
@@ -250,30 +263,30 @@
 
     <!-- gallerySection -->
     <section id="gallerySection">
-        <!-- TODO:   設定此區塊為四個一排並加入hover特效 -->
-        <div>
-            <div id="galleryImage1">
+        <!--    設定此區塊為四個一排並加入hover特效 -->
+        <div class="row ">
+            <div id="galleryImage1" class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="galleryText">Photo1</div>
             </div>
-            <div id="galleryImage2">
+            <div id="galleryImage2" class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="galleryText">Photo2</div>
             </div>
-            <div id="galleryImage3">
+            <div id="galleryImage3" class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="galleryText">Photo3</div>
             </div>
-            <div id="galleryImage4">
+            <div id="galleryImage4" class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="galleryText">Photo4</div>
             </div>
-            <div id="galleryImage5">
+            <div id="galleryImage5" class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="galleryText">Photo5</div>
             </div>
-            <div id="galleryImage6">
+            <div id="galleryImage6" class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="galleryText">Photo6</div>
             </div>
-            <div id="galleryImage7">
+            <div id="galleryImage7" class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="galleryText">Photo7</div>
             </div>
-            <div id="galleryImage8">
+            <div id="galleryImage8" class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="galleryText">Photo8</div>
             </div>
         </div>
@@ -282,66 +295,70 @@
 
     <!-- footer -->
     <footer id="footer" class="pt-5 bg-secondary text-white">
-        <!-- TODO: row mx-5 -->
-        <div class="footer-list">
-            <h4>Contact Us</h4>
-            <a href="mailto:service@brand.com">service@brand.com</a>
-        </div>
-        <div class="footer-list">
-            <h5 class="text-uppercase">Company</h5>
-            <ul>
-                <li>
-                    <a href="#">Careers</a>
-                </li>
-                <li>
-                    <a href="#">About Us</a>
-                </li>
-                <li>
-                    <a href="#">Blog</a>
-                </li>
-                <li>
-                    <a href="#">Press</a>
-                </li>
-                <li>
-                    <a href="#">Bonus</a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-list">
-            <h5 class="text-uppercase">Product</h5>
-            <ul>
-                <li>
-                    <a href="#">Enterprice</a>
-                </li>
-                <li>
-                    <a href="#">Pricing</a>
-                </li>
-                <li>
-                    <a href="#">Security</a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-list">
-            <h5 class="text-uppercase">Resource</h5>
-            <ul>
-                <li>
-                    <a href="#">Guilde</a>
-                </li>
-                <li>
-                    <a href="#">Help Center</a>
-                </li>
-                <li>
-                    <a href="#">API</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-            </ul>
+        <div class="row mx-5
+">
+            <!--  row mx-5 -->
+            <div class="footer-list col-12 col-sm-6 col-md-4 col-lg-3 my-5">
+                <h4>Contact Us</h4>
+                <a href="mailto:service@brand.com">service@brand.com</a>
+            </div>
+            <div class="footer-list col-12 col-sm-6 col-md-4 col-lg-3 my-5">
+                <h5 class="text-uppercase">Company</h5>
+                <ul>
+                    <li>
+                        <a href="#">Careers</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Press</a>
+                    </li>
+                    <li>
+                        <a href="#">Bonus</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-list col-12 col-sm-6 col-md-4 col-lg-3 my-5">
+                <h5 class="text-uppercase">Product</h5>
+                <ul>
+                    <li>
+                        <a href="#">Enterprice</a>
+                    </li>
+                    <li>
+                        <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#">Security</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-list col-12 col-sm-6 col-md-4 col-lg-3 my-5">
+                <h5 class="text-uppercase">Resource</h5>
+                <ul>
+                    <li>
+                        <a href="#">Guilde</a>
+                    </li>
+                    <li>
+                        <a href="#">Help Center</a>
+                    </li>
+                    <li>
+                        <a href="#">API</a>
+                    </li>
+                    <li>
+                        <a href="#">Events</a>
+                    </li>
+                </ul>
 
+            </div>
         </div>
         <div class="footer-end bg-dark mt-5 py-2">
-            <p class="text-center">&copy; Copyright@2020 X.Lab</p>
+            <p class="text-center">&copy; David@2020 X.Lab</p>
         </div>
+
     </footer>
 
     <!-- 連結Bootstrap所需要的js -->
